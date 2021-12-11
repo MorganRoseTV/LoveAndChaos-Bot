@@ -36,6 +36,7 @@ Pull requests are welcome, though admittedly I do not know much about GitHub yet
 - [x] Make code look pretty
 - [x] Make all current code work, bug free
 - [ ] Come up with more contents to add to this list
+- [x] Add comments throughout the code to explain what it does.
 
 ## Contact Me
 You can contact me either here on GitHub, or feel free to join my [Discord Server](https://discord.gg/fnt7YuzdMq) where you can ask me questions or make suggestions!

@@ -8,7 +8,7 @@ class Fun(commands.Cog):
 
         @bot.command(aliases=['8ball'])
         async def _8ball(ctx, *, question='5'):
-            responses = [
+            responses = [ # The list of possible responses
               'It is certain.',
               'It is decidedly so.',
               'Without a doubt.',
@@ -30,9 +30,9 @@ class Fun(commands.Cog):
               'Very doubtful.'
               ]
             if question == '5':
-              await ctx.send('Please input a question.')
+              await ctx.send('Please input a question.') # Catches empty messages and requests additional args
             else:
-              await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}')
+              await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}') # Sends a randomized response to a question
 
 def setup(bot):
     bot.add_cog(Fun(bot))
