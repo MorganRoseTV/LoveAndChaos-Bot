@@ -4,7 +4,7 @@ from discord.ext import commands, tasks
 from itertools import cycle
 from dotenv import load_dotenv
 
-client = discord.Client
+client = discord.Client()
 bot = commands.Bot(command_prefix='>')
 status = cycle(['>help', 'Mess around and find out.'])
 
@@ -13,7 +13,7 @@ async def on_ready():
     channel = bot.get_channel(917635324983783435)
     await channel.send(f'{bot.user.mention} is now online.')
     status_update.start()
-    print('{0.user} is now logged in.'.format(client))
+    print('{0.user} is now logged in.'.format(bot))
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -60,5 +60,4 @@ async def stop(ctx):
     await bot.close()
 
 load_dotenv(override=True)
-token = os.getenv('token')
 bot.run(os.getenv('token'))

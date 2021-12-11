@@ -29,10 +29,10 @@ class Fun(commands.Cog):
               'Outlook not so good.',
               'Very doubtful.'
               ]
-            # if question = 5:
-            #  await ctx.send('Please input a question.')
-            # else:
-            await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}')
+            if question == '5':
+              await ctx.send('Please input a question.')
+            else:
+              await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}')
 
 def setup(bot):
     bot.add_cog(Fun(bot))
