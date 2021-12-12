@@ -5,7 +5,7 @@ from itertools import cycle
 from dotenv import load_dotenv
 
 client = discord.Client()
-bot = commands.Bot(command_prefix='>') # Sets the prefix
+bot = commands.Bot(command_prefix='!') # Sets the prefix
 status = cycle(['>help', 'Mess around and find out.']) # List of presence indicators
 
 @bot.event

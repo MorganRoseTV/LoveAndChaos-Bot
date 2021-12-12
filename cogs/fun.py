@@ -1,4 +1,5 @@
 import random
+import discord
 from discord.ext import commands
 
 class Fun(commands.Cog):
@@ -33,6 +34,20 @@ class Fun(commands.Cog):
               await ctx.send('Please input a question.') # Catches empty messages and requests additional args
             else:
               await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}') # Sends a randomized response to a question
+
+        @bot.command()
+        async def hug(ctx, member: discord.Member):
+          await ctx.send(f'{ctx.author.mention} sends {member.mention} a hug! They\'re such cuties!') # Hug command output
+        @hug.error
+        async def hug_error(ctx, error):
+          print(error) #prints errors to console
+
+        @bot.command()
+        async def bite(ctx, member: discord.Member):
+          await ctx.send(f'{ctx.author.mention} bites {member.mention} and makes them bleed :)') # Bite command output
+        @bite.error
+        async def bite_error(ctx,error):
+          print(error) #Prints errors to console
 
 def setup(bot):
     bot.add_cog(Fun(bot))
