@@ -5,8 +5,11 @@ from itertools import cycle
 from dotenv import load_dotenv
 
 client = discord.Client()
-bot = commands.Bot(command_prefix='!') # Sets the prefix
-status = cycle(['>help', 'Mess around and find out.']) # List of presence indicators
+load_dotenv(override=True) #loads .env
+token = os.getenv("token") #fetches token from .env
+prefix = os.getenv("command_prefix") #fetches prefix from .env
+bot = commands.Bot(prefix) # Sets the prefix
+status = cycle([f'{prefix}help (not set up yet </3)', 'Mess around and find out.']) # List of presence indicators
 
 @bot.event
 async def on_ready():
@@ -59,5 +62,5 @@ async def stop(ctx):
     print('Stopping bot.')
     await bot.close()
 
-load_dotenv(override=True)
-bot.run(os.getenv('token')) # Allows the bot to log in as its user counterpart on Discord. 'token' is taken from a hidden file named .env
+
+bot.run(token) # Allows the bot to log in as its user counterpart on Discord. 'token' is taken from a hidden file named .env
