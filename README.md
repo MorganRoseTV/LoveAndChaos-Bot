@@ -1,4 +1,4 @@
-# LoveAndChaos-Bot v0.1.0
+# LoveAndChaos-Bot v0.1.1
 
 LoveAndChaos-Bot is a Discord Bot specifically designed for a private server; this bot is merely a test and a method to expose MorganRoseTV to coding in python and to reintroduce them to the world of programming.
 
@@ -19,7 +19,9 @@ LoveAndChaos-Bot is a Discord Bot specifically designed for a private server; th
 **ping**: Returns the bot's latency\
 **makelist**: Makes a list from the user's message.
 #### Moderation Module
-**Bonk**: Sends a user to timeout for 5 minutes.
+**bonk**: Sends a user to timeout for 5 minutes.\
+**createrole**: Creates a role with the name set in the message.\
+**deleterole**: Deletes the role with the name set in the message.
 
 ## Notes
 
@@ -36,7 +38,6 @@ Pull requests are welcome, though admittedly I do not know much about GitHub yet
 - [ ] Create and add a profile picture to the bot
 - [x] Make code look pretty
 - [x] Make all current code work, bug free
-- [ ] Come up with more contents to add to this list
 - [x] Add comments throughout the code to explain what it does.
 - [x] Add new fun commands; Hug, and Bite
 - [x] Add Bonk command
